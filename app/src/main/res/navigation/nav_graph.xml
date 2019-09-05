@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/listFilesFragment">
+
+    <fragment android:id="@+id/listFilesFragment" android:name="com.klaseca.comicsview.fragments.ListFilesFragment"
+              android:label="fragment_list_files" tools:layout="@layout/fragment_list_files">
+        <action android:id="@+id/toEmptyDirFragment" app:destination="@id/emptyDirFragment"/>
+        <action android:id="@+id/toImageScrollFragment"
+                app:destination="@id/imageScrollFragment"/>
+    </fragment>
+    <fragment android:id="@+id/emptyDirFragment" android:name="com.klaseca.comicsview.fragments.EmptyDirFragment"
+              android:label="fragment_empty_dir" tools:layout="@layout/fragment_empty_dir"/>
+    <fragment android:id="@+id/mangaCatalogFragment"
+              android:name="com.klaseca.comicsview.fragments.MangaCatalogFragment"
+              android:label="fragment_manga_catalog" tools:layout="@layout/fragment_manga_catalog">
+        <action android:id="@+id/toMangaInfoFragment"
+                app:destination="@id/mangaInfoFragment"/>
+    </fragment>
+    <fragment android:id="@+id/mangaInfoFragment" android:name="com.klaseca.comicsview.fragments.MangaInfoFragment"
+              android:label="fragment_manga_info" tools:layout="@layout/fragment_manga_info">
+        <argument android:name="pageUrl" app:argType="string"/>
+        <action android:id="@+id/toDownloadListFragment"
+                app:destination="@id/downloadListFragment"/>
+    </fragment>
+    <fragment android:id="@+id/downloadListFragment"
+              android:name="com.klaseca.comicsview.fragments.DownloadListFragment"
+              android:label="fragment_download_list" tools:layout="@layout/fragment_download_list">
+        <argument android:name="pageUrl" app:argType="string"/>
+        <argument android:name="comicsName" app:argType="string"/>
+    </fragment>
+    <fragment android:id="@+id/imageScrollFragment" android:name="com.klaseca.comicsview.fragments.ImageScrollFragment"
+              android:label="fragment_image_scroll" tools:layout="@layout/fragment_image_scroll">
+        <argument android:name="zipPath" app:argType="string"/>
+    </fragment>
+    <fragment android:id="@+id/readMangaFragment" android:name="com.klaseca.comicsview.fragments.ReadMangaFragment"
+              android:label="fragment_read_manga" tools:layout="@layout/fragment_read_manga">
+        <action android:id="@+id/toReadMangaInfoFragment"
+                app:destination="@id/readMangaInfoFragment"/>
+    </fragment>
+    <fragment android:id="@+id/readMangaInfoFragment" android:name="com.klaseca.comicsview.fragments.ReadMangaInfoFragment"
+              android:label="fragment_read_manga_info" tools:layout="@layout/fragment_read_manga_info">
+        <argument android:name="pageUrl" app:argType="string"/>
+        <action android:id="@+id/toReadListFragment"
+                app:destination="@id/readListFragment"/>
+    </fragment>
+    <fragment android:id="@+id/readListFragment" android:name="com.klaseca.comicsview.fragments.ReadListFragment"
+              android:label="ReadListFragment">
+        <argument android:name="pageUrl" app:argType="string"/>
+        <action android:id="@+id/toReadImageScrollFragment"
+                app:destination="@id/readImageScrollFragment"/>
+    </fragment>
+    <fragment android:id="@+id/readImageScrollFragment"
+              android:name="com.klaseca.comicsview.fragments.ReadImageScrollFragment"
+              android:label="ReadImageScrollFragment">
+        <argument android:name="pageUrl" app:argType="string"/>
+    </fragment>
+
+</navigation>

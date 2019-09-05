@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/root_img_scroll"
+             tools:context=".fragments.ImageScrollFragment">
+
+    <com.klaseca.comicsview.fragments.CustomViewPager
+            android:id="@+id/view_pager_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    <LinearLayout
+            android:id="@+id/setting_panel"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="top"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:background="@color/colorPrimary">
+        <ImageView
+                android:id="@+id/rotate"
+                android:src="@drawable/rotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--<SeekBar-->
+            <!--android:id="@+id/seek_bar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:paddingBottom="20dp"-->
+            <!--android:layout_gravity="bottom"-->
+    <!--/>-->
+
+</FrameLayout>

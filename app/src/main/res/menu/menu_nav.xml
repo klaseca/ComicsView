@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/listFilesFragment"
+          android:title="Device"
+          android:icon="@drawable/phone">
+    </item>
+
+    <item android:id="@+id/mangaCatalogFragment"
+          android:title="MangaChan"
+          android:icon="@drawable/mch">
+    </item>
+
+    <item android:id="@+id/readMangaFragment"
+          android:title="ReadManga"
+          android:icon="@drawable/mch">
+    </item>
+
+</menu>
